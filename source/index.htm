@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Demo Panel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="author" content="The Develovers">
+	<style type="text/css">
+		body {
+			background: #fff;
+			padding: 5px;
+			font-family: "Helvetica Neue", sans-serif;
+			font-size: 13px;
+			color: #4d4d4d;
+		}
+
+		a {
+			color: #4d4d4d;
+			text-decoration: underline;
+		}
+
+		a:hover, a:focus {
+			text-decoration: none;
+		}
+
+		ul {
+			margin-top: 0;
+			padding: 0;
+			list-style: none;
+            margin-left: 5px;
+		}
+
+		ul li  {
+			list-style-type: none;
+			margin-bottom: 8px;
+		}
+		
+		.button-option-list a {
+			padding: 3px 10px;
+			background-color: #ccc;
+			color: #595959;
+			text-decoration: none;
+		}
+
+		.button-option-list a:hover, .button-option-list a:focus {
+			background-color: #bdbdbd;
+			text-decoration: none;
+		}
+
+		.button-option-list a.active {
+			background-color: #5CB85C; 
+			color: #fff;
+		}
+
+		h2 {
+			margin-top: 5px;
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+
+		hr {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 0;
+			border-top: 1px solid #ccc;
+		}
+
+		.color-list {
+			margin-bottom: 0;
+		}
+		
+		.color-list > li {
+			display: -moz-inline-stack;
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+		}
+
+		.color-list > li > a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background-color: #000;
+			text-indent: -9999px;
+            border-radius: 20px;
+            opacity: .4;
+		}
+
+		.color-list a:hover,
+		.color-list a:focus {
+			position: relative;
+            opacity:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="demo-type">
+			<h2>Temas</h2>
+			<ul class="color-list">
+<!--				<li><a href="#" title="Indian Red" data-skin="indianred" data-color="#cd5c5c" style="background-color: #cd5c5c;">Indian Red</a></li>-->
+<!--				<li><a href="#" title="Slate Gray" data-skin="slategray" data-color="#3F5367" style="background-color: #3F5367;">Slate Gray</a></li>-->
+<!--				<li><a href="#" title="Sea Green" data-skin="seagreen" data-color="#3F7577" style="background-color: #3F7577;">Seagreen</a></li>-->
+<!--				<li><a href="#" title="Brown" data-skin="brown" data-color="#CD853F" style="background-color: #CD853F;">Brown</a></li>-->
+<!--				<li><a href="#" title="Light Green" data-skin="lightgreen" data-color="#8AA026" style="background-color: #8AA026;">Light Green</a></li>-->
+				<li><a href="#" title="Red" data-skin="red" data-color="#EC2121" style="background-color: #EC2121;">Red</a></li>
+				<li><a href="#" title="Black" data-skin="black" data-color="#353535" style="background-color: #353535;">Black</a></li>
+				<li><a href="#" title="Green" data-skin="green" data-color="#72BB22" style="background-color: #72BB22;">Green</a></li>
+<!--				<li><a href="#" title="Yellow" data-skin="yellow" data-color="#E6D438" style="background-color: #E6D438;">Yellow</a></li>-->
+				<li><a href="#" title="Deep Blue Sky" data-skin="deepskyblue" data-color="#00BFFF" style="background-color: #00BFFF;">Deep Blue Sky</a></li>
+			</ul>
+			<!--<a href="#" title="Default Color" class="reset-color" target="_parent">Default Color</a>
+			<p>Note For Skills Chart (Personal Template): <br><br>
+				<em>- Click above color after chart has been displayed</em>
+			</p>
+			<em></em>-->
+		</div>
+	</div>
+
+	<script src="index_data/jquery-2.js"></script>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			$sourceURL = '';
+
+			$attr =  window.parent.$('#demo-panel').attr('data-sourceURL');
+			if (typeof $attr !== typeof undefined && $attr !== false) $sourceURL = window.parent.$('#demo-panel').attr('data-sourceURL');
+
+			// COLOR OPTIONS
+			$('.color-list a').click( function(e) {
+				e.preventDefault();
+
+				var skinName = $(this).attr('data-skin'),
+					hexColor = $(this).attr('data-color');
+
+				// CHANGE SKILL CHARTS
+				if( window.parent.$('#skills canvas').length > 0 ) {
+					var chart1 = window.parent.$('#chart1'),
+					chart2 = window.parent.$('#chart2'),
+					chart3 = window.parent.$('#chart3'),
+					chart4 = window.parent.$('#chart4');
+
+					chart1.data('easyPieChart').options.barColor = hexColor;
+					chart2.data('easyPieChart').options.barColor = hexColor;
+					chart3.data('easyPieChart').options.barColor = hexColor;
+					chart4.data('easyPieChart').options.barColor = hexColor;
+					chart1.data('easyPieChart').update(chart1.attr('data-percent'));
+					chart2.data('easyPieChart').update(chart2.attr('data-percent'));
+					chart3.data('easyPieChart').update(chart3.attr('data-percent'));
+					chart4.data('easyPieChart').update(chart4.attr('data-percent'));
+				}
+
+
+				if(window.parent.$('#css-skin').length > 0 ) window.parent.$('#css-skin').remove();
+				window.parent.$('head').append('<link id="css-skin" rel="stylesheet" href="' + $sourceURL + 'assets/css/skins/' + skinName + '.css" type="text/css" />');
+			});
+
+			// RESET COLOR
+			$('.reset-color').click( function(e) {
+				e.preventDefault();
+
+				if(window.parent.$('#css-skin').length > 0 ) window.parent.$('#css-skin').remove();
+			});
+
+		});
+
+	</script>
+
+</body></html>
