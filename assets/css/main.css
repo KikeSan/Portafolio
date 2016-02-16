@@ -269,16 +269,16 @@ body #jpreBar {
 
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #ffc472;
-  border-color: #ffae3f;
+    background-color: #1B3058;
+    border-color: #1B3058;
 }
 .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active,
 .btn-primary[disabled]:hover,
 .btn-primary[disabled]:focus,
 .btn-primary[disabled]:active,
 .btn-primary[disabled].active {
-  background-color: #ffc472;
-  border-color: #ffae3f;
+    background-color: #1B3058;
+    border-color: #1B3058;
 }
 
 /* --------------------- */
@@ -5369,7 +5369,7 @@ img.mfp-img {
 .hero-unit .slide-caption {
   padding-bottom: 50px;
   margin: 0 auto;
-  text-shadow: 3px 3px 4px #333;
+  text-shadow: 2px 2px 2px #111;
 }
 @media screen and (max-width: 480px) {
   .hero-unit .slide-caption {
