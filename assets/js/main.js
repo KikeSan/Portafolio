@@ -63,6 +63,22 @@ function PintaWork(item,contenido){
     img.addEventListener('load', function() {
         $('.mfp-bottom-bar').css('background','rgba(' + HexToRgb(colorsWork1[item]) + ',.95)');
         $('.mfp-bottom-bar .btnVerWeb').css('background','rgb(' + HexToRgb(colorsWork2[item]) + ')');
+        
+        /*$('.mfp-bottom-bar .btnVerWeb').hover(function(){
+            TweenMax.to($(this).find('p'), 0.7, {marginLeft:-10});
+            console.log('Link Ver más');
+        })*/
+        
+        $( ".mfp-bottom-bar .btnVerWeb" )
+            .mouseenter(function() {
+            TweenMax.to($(this).find('p'), 0.3, {marginLeft:-20, ease:Power3.easeInOut});
+            TweenMax.to($(this).find('i'), 0.3, {opacity:1, marginLeft:15, ease:Power3.easeInOut});
+            console.log('Link Ver más');
+        })
+            .mouseleave(function() {
+            TweenMax.to($(this).find('p'), 0.5, {marginLeft:-13, ease:Power3.easeInOut});
+            TweenMax.to($(this).find('i'), 0.3, {opacity:0, marginLeft:0, ease:Power3.easeInOut});
+        });
     });
 }
 

@@ -239,7 +239,7 @@ jQuery( function($){
 				originalTitle = currentItem.title;
                 if($(currentItem).parents('.work-item').find('img').attr('id').substring(0,4) == 'http'){
                     console.log('DEMO-->>> Si tiene link');
-                    currentItem.title = '<h3>' + originalTitle + '</h3>' + '<p>' + $(currentItem).parents('.work-item').find('img').attr('alt') + '</p><a href="'+$(currentItem).parents('.work-item').find('img').attr('id')+'" class="btnVerWeb" target="_blank">LINK</a>';
+                    currentItem.title = '<h3>' + originalTitle + '</h3>' + '<p>' + $(currentItem).parents('.work-item').find('img').attr('alt') + '</p><a href="'+$(currentItem).parents('.work-item').find('img').attr('id')+'" class="btnVerWeb" target="_blank"><p>VER</p><i class="fa fa-chevron-right"></i></a>';
                 }else{
                     console.log('DEMO-->>> No tiene link');
                     currentItem.title = '<h3>' + originalTitle + '</h3>' + '<p>' + $(currentItem).parents('.work-item').find('img').attr('alt') + '</p>';
@@ -248,6 +248,7 @@ jQuery( function($){
 				this.st.mainClass = 'mfp-fade';
 //                var fnd = new FondoLB($(currentItem).parents('.work-item').find('img').attr('src'));
                 var fnd = new PintaWork($(currentItem).parents('.work-item').find('img').attr('class'),$(currentItem).parents('.work-item').find('img').attr('src'));
+                
 			},
 			close: function() {
 				currentItem.title = originalTitle; 
