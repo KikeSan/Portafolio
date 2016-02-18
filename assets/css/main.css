@@ -68,6 +68,16 @@ body #jpreBar {
 /* --------------------- */
 /* NAVIGATION BAR
 /* --------------------- */
+.espacioLogo{
+    width: 100px;
+    color: rgb(156, 23, 55);
+}
+.navbar-header{
+    position: absolute;
+    margin-left: -37px !important;
+    top: 0px;
+    left: 50%;
+}
 .navbar-brand {
   padding: 0px 15px;
 }
@@ -100,6 +110,10 @@ body #jpreBar {
 
 .navbar-nav {
   padding: 10px 0;
+    
+    left: 50%;
+    position: absolute;
+    margin-left: -255px;
 }
 .navbar-nav > li {
   margin: 0 10px;
