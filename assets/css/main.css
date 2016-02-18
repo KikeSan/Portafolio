@@ -202,9 +202,23 @@ body #jpreBar {
 }
 
 @media screen and (max-width: 767px) {
-  .navbar-collapse {
+    .navbar-collapse {
       background-color: #171928;
-  }
+    }
+    
+    .navbar-header{
+        position: initial;
+        margin-left: 0px !important;
+        top: 0px;
+        left: 0;
+    }
+    
+    .navbar-nav {
+        padding: 10px 0;
+        left: 0;
+        position: initial;
+        margin-left: 0px;
+    }
 }
 /* --------------------- */
 /* BUTTONS
@@ -6229,6 +6243,17 @@ img.mfp-img {
     color: #00a6e7;
   text-overflow: ellipsis;
 }
+.twitter-stream #tweet ul li .interact a {
+    text-decoration: none;
+    /*text-decoration: underline;
+    color: #00a6e7;
+    text-overflow: ellipsis;*/
+    padding: 0 5px;
+    font-size: 0.8em;
+}
+.twitter-stream #tweet ul li .interact a:hover {
+    text-decoration: underline;
+}
 .twitter-stream #tweet ul li a span {
   word-wrap: break-word;
 }
@@ -6242,7 +6267,7 @@ img.mfp-img {
 /* ------------------ FOOTER ------------------ */
 #footer {
   padding-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .back-to-top {
@@ -6282,6 +6307,7 @@ img.mfp-img {
     position: relative;
     top: 0px;
     width: 100%;
+    height: 50px;
 }
 
 #footer .diagonalUp img{
@@ -6324,6 +6350,7 @@ img.mfp-img {
 
 .copyright {
   font-size: 0.8em;
-  line-height: 66px;
+  line-height: 75px;
   text-align: right;
+    margin: 0;
 }

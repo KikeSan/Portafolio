@@ -91,7 +91,7 @@ var config1 = {
     "enableLinks": true,
     "showUser": false,
     "showPermalinks": false,
-    "showInteraction": false
+    "showInteraction": true
 };
 twitterFetcher.fetch(config1);
 
