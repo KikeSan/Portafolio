@@ -1,11 +1,15 @@
-//  0: Interbank
-//  1: JGJ
-//  2: Promperu
-//  3: Nosotras
-//  4: San Fernando
-var colorsWork1 = ['#153370','#133F59','#DA1F0F','#F12F88','#233C95'];
-var colorsWork2 = ['#009b3a','#419D46','#FFFFFF','#152D6F','#EC433B'];
-//r colorsWork2 = [Interbank, JGJProye, PromPeru, Nosotras, San Fern];
+// 0: Interbank
+// 1: JGJ
+// 2: Promperu
+// 3: Nosotras
+// 4: San Fernando
+// 5: GlobalNet
+// 6: Miller 
+// 7: Cristal 
+// 8: Obrainsa 
+var colorsWork1 = ['#153370','#133F59','#DA1F0F','#F12F88','#233C95','#205CAD','#DB0500','#010E58','#184D83'];
+var colorsWork2 = ['#009b3a','#419D46','#FFFFFF','#152D6F','#EC433B','#233C95','#75370C',''];
+//r colorsWork2 = [Interbank, JGJProye, PromPeru, Nosotras, San Fern, GlobalNe, Miller  , Cristal , Obrainsa];
 
 $(document).ready(function() {
     

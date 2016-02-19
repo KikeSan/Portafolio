@@ -5914,7 +5914,7 @@ img.mfp-img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(11, 14, 41, 0.85);
+  background-color: rgba(11, 14, 41, 0.95);
 }
 .work-item-list .image-overlay:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
