@@ -6263,7 +6263,10 @@ img.mfp-img {
 .twitter-stream #tweet ul li .timePosted {
   font-size: 0.8em;
 }
-
+.twitter-stream #tweet .tweet img{
+    width: 30px;
+    height: 30px;
+}
 /* ------------------ FOOTER ------------------ */
 #footer {
   padding-top: 0px;
