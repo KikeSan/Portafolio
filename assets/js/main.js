@@ -43,7 +43,6 @@ $(document).ready(function() {
 //        var foto = new Foto($(".work-item-list>#"+i+" img").attr("src"),".work-item-list>#"+i+">.image-overlay",$(".work-item-list>#"+i+" img").attr("class"));
     }
     
-    
 });
 
 function FondoLB(contenido){

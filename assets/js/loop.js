@@ -175,8 +175,7 @@ jQuery( function($){
 	*     Twitter's default renderings.
 	*/
 
-    //twitterFetcher.fetch( '696716747760627712', 'tweet', 1, true, false, true, 'default');
-
+//    twitterFetcher.fetch( '420304008767475712', 'tweet', 1, true, false, true, 'default');
 
 	/*----------------------/
 	/* SCROLL TO TOP
